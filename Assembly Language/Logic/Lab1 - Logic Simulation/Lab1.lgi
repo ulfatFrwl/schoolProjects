@@ -1,0 +1,366 @@
+41 2 0
+38 1
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 96 63 76 0 \NUL
+ufruitwa
+22 64 272 264 252 0 \NUL
+Part A Output                            
+8 216 184 265 135 1 0
+8 280 184 329 135 1 0
+8 352 184 401 135 1 0
+11 168 424 195 326 0 1
+20 264 208 323 189 0
+in_3
+20 336 208 395 189 0
+in_2
+20 408 208 467 189 0
+in_1
+8 424 184 473 135 1 0
+20 480 208 539 189 0
+in_0
+19 80 312 139 293 0
+in_3
+19 64 336 123 317 0
+in_2
+19 48 360 107 341 0
+in_1
+19 32 384 91 365 0
+in_0
+22 24 472 279 452 0 \NUL
+LED displays each digit corresponding
+22 24 496 387 476 0 \NUL
+to its binary values as the 4 switches are toggled on/off
+22 448 472 641 452 0 \NUL
+The LED turn on in a pattern. 
+7 360 664 409 615 0 1
+7 360 704 409 655 0 1
+19 272 592 331 573 0
+c_2
+19 272 632 331 613 0
+c_1
+19 272 672 331 653 0
+c_0
+22 416 688 480 668 0 \NUL
+SOP/POS
+22 416 648 492 628 0 \NUL
+NAND Only
+22 416 608 484 588 0 \NUL
+NOR Only
+22 448 496 700 476 0 \NUL
+Corresponding to the truth table output
+22 208 738 525 718 0 \NUL
+Despite different circuitry, the output for all three
+22 208 762 677 742 0 \NUL
+LED is the same. According to the truth table in part C of lab instructions
+22 280 32 653 12 0 \NUL
+You are only permitted to modify or add text to this page.
+22 280 56 605 36 0 \NUL
+Your circuit must use senders and/or receivers to
+22 280 80 538 60 0 \NUL
+interface with these inputs and outputs.
+7 472 360 521 311 0 1
+7 544 360 593 311 0 1
+7 616 360 665 311 0 1
+19 416 392 475 373 0
+b_2
+19 488 392 547 373 0
+b_1
+19 560 392 619 373 0
+b_0
+7 360 624 409 575 0 1
+22 64 136 616 116 0 \NUL
+Input                                                                                                                                 
+22 448 272 650 252 0 \NUL
+Part B Output                            
+22 272 552 473 532 0 \NUL
+Part C Output                            
+1 481 198 470 159
+1 398 159 409 198
+1 326 159 337 198
+1 262 159 265 198
+1 136 302 169 390
+1 120 326 169 396
+1 104 350 169 402
+1 88 374 169 408
+1 361 639 328 622
+1 361 679 328 662
+1 473 335 472 382
+1 545 335 544 382
+1 617 335 616 382
+1 361 599 328 582
+38 2
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 96 63 76 0 \NUL
+ufruitwa
+22 280 32 735 12 0 \NUL
+Do not add any circuitry to this page. You may delete the components
+22 280 88 668 68 0 \NUL
+Your circuit must use senders to interface with these LEDs.
+22 280 56 650 36 0 \NUL
+on this page if you are not implementing the extra credit.
+22 280 120 472 100 0 \NUL
+Extra credit implemented?  N
+38 3
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 96 63 76 0 \NUL
+ufruitwa
+19 232 229 291 210 0
+in_3
+19 231 255 290 236 0
+in_2
+20 512 293 571 274 0
+b_2
+20 514 328 573 309 0
+b_1
+22 358 138 445 118 0 \NUL
+Part B circuit
+14 331 343 380 294
+19 231 279 290 260 0
+in_1
+19 231 307 290 288 0
+in_0
+3 428 308 477 259 0 0
+5 332 322 381 273 0
+19 229 361 288 342 0
+in_0
+20 514 361 573 342 0
+b_0
+22 144 423 677 403 0 \NUL
+LED b_1 is always off so it's connected to a ground, giving it a permanent 0 value
+22 144 447 510 427 0 \NUL
+LED b_2 lights up when switch in_1 is on and in_0 is off
+22 143 471 442 451 0 \NUL
+LED b_0 lights up whenever switch in_0 is on
+1 377 318 515 318
+1 429 269 287 269
+1 333 297 287 297
+1 429 297 378 297
+1 513 283 474 283
+1 515 351 285 351
+38 4
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 96 63 76 0 \NUL
+ufruitwa
+22 335 127 453 107 0 \NUL
+Part C SOP circuit
+19 108 218 167 199 0
+in_2
+19 108 246 167 227 0
+in_1
+4 297 247 346 198 0 1
+20 700 311 759 292 0
+c_0
+19 108 287 167 268 0
+in_2
+19 107 311 166 292 0
+in_1
+19 107 335 166 316 0
+in_0
+5 198 302 247 253 0
+3 306 326 355 277 1 0
+19 107 370 166 351 0
+in_2
+19 106 394 165 375 0
+in_1
+19 106 418 165 399 0
+in_0
+5 205 409 254 360 0
+3 330 409 379 360 1 0
+4 545 326 594 277 1 0
+22 95 523 604 503 0 \NUL
+After simplifying the sum of product equation, three terms can turn on c_0 LED
+22 95 554 657 534 0 \NUL
+Those three elements are ultimately grouped by an or gate which then connects to c_0
+22 231 491 518 471 0 \NUL
+SOP Equation (simplified) : a'b + a'bc + ab'c
+1 164 208 298 208
+1 164 236 298 236
+1 164 277 199 277
+1 244 277 307 287
+1 163 301 307 301
+1 163 325 307 315
+1 163 360 331 370
+1 162 384 206 384
+1 251 384 331 384
+1 162 408 331 398
+1 343 222 546 287
+1 352 301 546 301
+1 376 384 546 315
+1 591 301 701 301
+38 5
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 95 63 75 0 \NUL
+ufruitwa
+3 603 393 652 344 1 1
+20 696 378 755 359 0
+c_1
+22 354 88 439 68 0 \NUL
+Part C NAND
+19 92 183 151 164 0
+in_2
+19 90 253 149 234 0
+in_1
+3 204 212 253 163 0 1
+3 203 254 252 205 0 1
+3 326 234 375 185 0 1
+19 90 319 149 300 0
+in_2
+3 194 348 243 299 0 1
+19 91 377 150 358 0
+in_1
+19 91 404 150 385 0
+in_0
+3 326 393 375 344 1 1
+19 90 470 149 451 0
+in_2
+19 90 497 149 478 0
+in_1
+19 91 540 150 521 0
+in_0
+3 192 526 241 477 0 1
+3 326 526 375 477 1 1
+22 88 638 608 618 0 \NUL
+In A) a and b individually go through a NAND gate to result in their complements
+22 123 669 453 649 0 \NUL
+another NAND gate is implemented to achieve a'b'
+22 86 736 599 716 0 \NUL
+Note: 2 NAND gates are cancelled out due to OR following AND implementation
+22 51 209 67 189 0 \NUL
+A)
+22 51 366 69 346 0 \NUL
+B)
+22 54 504 71 484 0 \NUL
+C)
+22 87 592 318 572 0 \NUL
+assume in_2 = a, in_1 = b, in_0 = c
+22 87 698 291 678 0 \NUL
+B) and C) follow the same logic
+22 306 119 481 99 0 \NUL
+Equation: a'b + a'bc + ab'c
+1 697 368 649 368
+1 148 173 205 173
+1 148 173 205 201
+1 146 243 204 215
+1 146 243 204 243
+1 250 187 327 195
+1 249 229 327 223
+1 146 309 195 309
+1 146 309 195 337
+1 240 323 327 354
+1 147 367 327 368
+1 147 394 327 382
+1 146 487 193 487
+1 146 487 193 515
+1 146 460 327 487
+1 238 501 327 501
+1 147 530 327 515
+1 372 209 604 354
+1 372 368 604 368
+1 372 501 604 382
+38 6
+22 8 32 48 12 0 \NUL
+Lab 1
+22 8 64 109 44 0 \NUL
+Fruitwala, Ulfat
+22 8 96 63 76 0 \NUL
+ufruitwa
+22 357 102 434 82 0 \NUL
+Part C NOR
+19 79 500 138 481 0
+in_2
+19 80 534 139 515 0
+in_1
+19 80 586 139 567 0
+in_0
+20 725 341 784 322 0
+c_2
+4 191 587 240 538 0 1
+4 193 529 242 480 0 1
+4 393 549 442 500 1 1
+4 394 209 443 160 0 1
+19 82 180 141 161 0
+in_2
+19 82 208 141 189 0
+in_1
+4 579 356 628 307 1 1
+19 81 327 140 308 0
+in_2
+19 81 372 140 353 0
+in_1
+19 80 429 139 410 0
+in_0
+4 391 356 440 307 1 1
+4 195 373 244 324 0 1
+4 196 430 245 381 0 1
+22 62 670 587 650 0 \NUL
+In A) a and b are directed connected to a NOR gate to result in a'b' (De Morgan's)
+22 62 699 509 679 0 \NUL
+In B) to achieve a'bc, a is directecly connected to a 3 input NOR gate
+22 96 726 581 706 0 \NUL
+bc are implemented with an additional NOR gate to achieve (ab'c')' --> a'bc
+22 35 192 51 172 0 \NUL
+A)
+22 31 377 49 357 0 \NUL
+B)
+22 31 547 48 527 0 \NUL
+C)
+22 62 752 335 732 0 \NUL
+C) follows same logic as the previous two
+22 82 632 313 612 0 \NUL
+assume in_2 = a, in_1 = b, in_0 = c
+22 303 131 478 111 0 \NUL
+Equation: a'b + a'bc + ab'c
+4 655 356 704 307 1 1
+1 136 576 192 548
+1 136 576 192 576
+1 135 490 194 490
+1 135 490 194 518
+1 239 504 394 510
+1 136 524 394 524
+1 237 562 394 538
+1 138 170 395 170
+1 138 198 395 198
+1 440 184 580 317
+1 137 362 196 334
+1 137 362 196 362
+1 136 419 197 391
+1 136 419 197 419
+1 241 348 392 331
+1 242 405 392 345
+1 137 317 392 317
+1 437 331 580 331
+1 439 524 580 345
+1 701 331 726 331
+1 625 331 656 331
+1 625 331 656 317
+1 625 331 656 345
+39 16777215
+47 0
+40 1 8 8
+50 800 800
+51 1 30
+30
+System
+20
+700
+0
+0
+1
+2
+2
+34
