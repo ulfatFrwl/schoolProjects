@@ -1,0 +1,12 @@
+
+nqueens: main.o Queen.o
+	g++ main.o Queen.o -o nqueens
+	
+main.o: main.cpp
+	g++ -c main.cpp
+
+Queen.o: Queen.cpp Queen.h
+	g++ -c Queen.cpp
+	
+clean:
+	rm *.o nqueens
