@@ -1,0 +1,31 @@
+README for HW 3: Life is all about balance, CSE 101
+
+U. Fruitwala, Feb 2020
+-------------------------------------------------------------------------
+
+Code files: Makefile, main.cpp, avl.cpp, avl.h
+Test files: simple-input.txt, simple-output.txt, allwords-basic.txt, allwords-basic-output.txt, allwords-more-range.txt, allwords-more-range-output.txt
+Extra files: README
+
+-------------------------------------------------------------------------
+
+This program parses through designated input file which contains 2 types of operations, i and r. 
+i means insert the following string, r means get the number of values lexographically between following two strings and write it to the output file.
+
+Example input file:
+i <string>
+r <string1> <string2>   (Note: string1 must be less than string2)
+
+-------------------------------------------------------------------------
+
+USAGE: 
+1) Run "make", to get executable "wordrange".
+2) Run "./wordrange <INPUT FILE> <OUTPUT FILE>"
+
+-------------------------------------------------------------------------
+
+CITATION:
+Code for insert, balance, rotate_right, and rotate_left is recreated from this link: https://www.geeksforgeeks.org/avl-tree-set-1-insertion/
+Additional code in the functions was written to reconnect child and parent pointer since the reference didn't implement a parent pointer of each node.
+
+Code for deleteAVL and printInOrder is from provided BST code.
