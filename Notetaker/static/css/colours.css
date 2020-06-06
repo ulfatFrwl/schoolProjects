@@ -1,0 +1,10 @@
+.blue {background-color: #B0C4DE; color:black;}
+.thistle{background-color: #D8BFD8; color:black;}
+.gold{background-color: #F5DEB3; color:black;}
+.pink{background-color: #FFE4E1; color:black;}
+.green{background-color: #8FBC8F; color:black;}
+
+.myTA{
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+}

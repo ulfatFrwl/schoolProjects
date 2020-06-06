@@ -1,0 +1,226 @@
+[[extend 'layout.html']]
+<head>
+  <link rel="stylesheet" href="[[=URL('static', 'css/colours.css')]]">
+</head>
+
+<div id="vue-target">
+  <section class="section">
+    <div class = "title">My Notes</div>
+
+    <!-- This is used to add a note -->
+    <div class = "level">
+      <div class = "level-left">
+          <span class = "icon is-medium" @click="add_note">
+            <i class = "fa fa-plus-square fas fa-2x"></i>
+          </span>
+      </div>
+    </div>
+
+    <!-- This displays the notes -->
+    <div class="columns is-multiline">
+      <div v-for="n in notes" class = "column is-3-desktop is-4-tablet is-12-mobile">
+
+          <!-- BLUE NOTE -->
+          <div v-if= "n.colour == 1" class = "box blue" @mouseleave = "do_save(n._idx)">
+            <div class = "level">
+              <!-- TITLE -->
+              <div v-if = "!n.edit_title" class = "level-left">
+                <textarea class = "myTA textarea has-fixed-size label" rows="1" v-model = "n.title">{{n.title}}</textarea>
+              </div>
+
+              <!-- STARRATER -->
+              <div class = "level-right">
+                <span @click = "do_rate(n._idx)">
+                  <i v-if = "n.rating == 1" class = "fa fa-star fas fa-lg has-text-danger" aria-hidden="true"></i>
+                  <i v-if = "n.rating == 0" class = "fa fa-star-o fas fa-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div v-if="!n.edit_content">
+              <textarea class = "myTA textarea has-fixed-size" rows = "6" v-model="n.content">{{n.content}}</textarea>
+            </div>
+
+            <!-- Icon for choosing note colour and delete button -->
+            <div class = "level">
+              <span class = "level-left">
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,2)" class = "fa fa-square fas fa-2x" style = "color:#D8BFD8"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,3)" class = "fa fa-square fas fa-2x" style = "color:#F5DEB3"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,4)" class = "fa fa-square fas fa-2x" style = "color:#FFE4E1"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,5)" class = "fa fa-square fas fa-2x" style = "color:#8FBC8F"></i></span>
+              </span>
+
+              <!-- DELETE -->
+              <span class = "level-right icon is-medium">
+                <i @click = "do_delete(n._idx)" class="fa fa-trash-o fas fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- THISTLE NOTE -->
+          <div v-if= "n.colour == 2" class = "box thistle" @mouseleave = "do_save(n._idx)">
+            <div class = "level">
+              <!-- TITLE -->
+              <div v-if = "!n.edit_title" class = "level-left">
+                <textarea class = "myTA textarea has-fixed-size label" rows="1" v-model = "n.title">{{n.title}}</textarea>
+              </div>
+
+              <!-- STARRATER -->
+              <div class = "level-right">
+                <span @click = "do_rate(n._idx)">
+                  <i v-if = "n.rating == 1" class = "fa fa-star fas fa-lg has-text-danger" aria-hidden="true"></i>
+                  <i v-if = "n.rating == 0" class = "fa fa-star-o fas fa-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div v-if="!n.edit_content">
+              <textarea class = "myTA textarea has-fixed-size" rows = "6" v-model="n.content">{{n.content}}</textarea>
+            </div>
+
+            <!-- Icon for choosing note colour and delete button -->
+            <div class = "level">
+              <span class = "level-left">
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,1)" class = "fa fa-square fas fa-2x" style = "color:#B0C4DE"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,3)" class = "fa fa-square fas fa-2x" style = "color:#F5DEB3"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,4)" class = "fa fa-square fas fa-2x" style = "color:#FFE4E1"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,5)" class = "fa fa-square fas fa-2x" style = "color:#8FBC8F"></i></span>
+              </span>
+
+              <!-- DELETE -->
+              <span class = "level-right icon is-medium">
+                <i @click = "do_delete(n._idx)" class="fa fa-trash-o fas fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- GOLD NOTE -->
+          <div v-if= "n.colour == 3" class = "box gold" @mouseleave = "do_save(n._idx)">
+            <div class = "level">
+              <!-- TITLE -->
+              <div v-if = "!n.edit_title" class = "level-left">
+                <textarea class = "myTA textarea has-fixed-size label" rows="1" v-model = "n.title">{{n.title}}</textarea>
+              </div>
+
+              <!-- STARRATER -->
+              <div class = "level-right">
+                <span @click = "do_rate(n._idx)">
+                  <i v-if = "n.rating == 1" class = "fa fa-star fas fa-lg has-text-danger" aria-hidden="true"></i>
+                  <i v-if = "n.rating == 0" class = "fa fa-star-o fas fa-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div v-if="!n.edit_content">
+              <textarea class = "myTA textarea has-fixed-size" rows = "6" v-model="n.content">{{n.content}}</textarea>
+            </div>
+
+            <!-- Icon for choosing note colour and delete button -->
+            <div class = "level">
+              <span class = "level-left">
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,1)" class = "fa fa-square fas fa-2x" style = "color:#B0C4DE"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,2)" class = "fa fa-square fas fa-2x" style = "color:#D8BFD8"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,4)" class = "fa fa-square fas fa-2x" style = "color:#FFE4E1"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,5)" class = "fa fa-square fas fa-2x" style = "color:#8FBC8F"></i></span>
+              </span>
+
+              <!-- DELETE -->
+              <span class = "level-right icon is-medium">
+                <i @click = "do_delete(n._idx)" class="fa fa-trash-o fas fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- PINK NOTE -->
+          <div v-if= "n.colour == 4" class = "box pink" @mouseleave = "do_save(n._idx)">
+            <div class = "level">
+              <!-- TITLE -->
+              <div v-if = "!n.edit_title" class = "level-left">
+                <textarea class = "myTA textarea has-fixed-size label" rows="1" v-model = "n.title">{{n.title}}</textarea>
+              </div>
+
+              <!-- STARRATER -->
+              <div class = "level-right">
+                <span @click = "do_rate(n._idx)">
+                  <i v-if = "n.rating == 1" class = "fa fa-star fas fa-lg has-text-danger" aria-hidden="true"></i>
+                  <i v-if = "n.rating == 0" class = "fa fa-star-o fas fa-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div v-if="!n.edit_content">
+              <textarea class = "myTA textarea has-fixed-size" rows = "6" v-model="n.content">{{n.content}}</textarea>
+            </div>
+
+            <!-- Icon for choosing note colour and delete button -->
+            <div class = "level">
+              <span class = "level-left">
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,1)" class = "fa fa-square fas fa-2x" style = "color:#B0C4DE"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,2)" class = "fa fa-square fas fa-2x" style = "color:#D8BFD8"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,3)" class = "fa fa-square fas fa-2x" style = "color:#F5DEB3"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,5)" class = "fa fa-square fas fa-2x" style = "color:#8FBC8F"></i></span>
+              </span>
+              <!-- DELETE -->
+              <span class = "level-right icon is-medium">
+                <i @click = "do_delete(n._idx)" class="fa fa-trash-o fas fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- GREEN NOTE -->
+          <div v-if= "n.colour == 5" class = "box green" @mouseleave = "do_save(n._idx)">
+            <div class = "level">
+              <!-- TITLE -->
+              <div v-if = "!n.edit_title" class = "level-left">
+                <textarea class = "myTA textarea has-fixed-size label" rows="1" v-model = "n.title">{{n.title}}</textarea>
+              </div>
+
+              <!-- STARRATER -->
+              <div class = "level-right">
+                <span @click = "do_rate(n._idx)">
+                  <i v-if = "n.rating == 1" class = "fa fa-star fas fa-lg has-text-danger" aria-hidden="true"></i>
+                  <i v-if = "n.rating == 0" class = "fa fa-star-o fas fa-lg" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div v-if="!n.edit_content">
+              <textarea class = "myTA textarea has-fixed-size" rows = "6" v-model="n.content">{{n.content}}</textarea>
+            </div>
+
+            <!-- Icon for choosing note colour and delete button -->
+            <div class = "level">
+              <span class = "level-left">
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,1)" class = "fa fa-square fas fa-2x" style = "color:#B0C4DE"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,2)" class = "fa fa-square fas fa-2x" style = "color:#D8BFD8"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,3)" class = "fa fa-square fas fa-2x" style = "color:#F5DEB3"></i></span>
+                <span class = "icon is-medium"><i @click = "do_change_colour(n._idx,4)" class = "fa fa-square fas fa-2x" style = "color:#FFE4E1"></i></span>
+              </span>
+              <!-- DELETE -->
+              <span class = "level-right icon is-medium">
+                <i @click = "do_delete(n._idx)" class="fa fa-trash-o fas fa-lg" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+
+  </section>
+</div>
+
+[[block page_scripts]]
+<!-- Loads the index-specific js for Vue -->
+<script>
+  let notes_url = "[[=XML(notes_url)]]";
+  let delete_url = "[[=XML(delete_url)]]"
+  let callback_url = "[[=XML(callback_url)]]";
+</script>
+<script src="js/index.js"></script>
+[[end]]
